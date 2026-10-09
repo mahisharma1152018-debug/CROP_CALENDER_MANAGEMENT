@@ -1,0 +1,1 @@
+import api from './api'; export const getCrops=()=>api.get('/crops'); export const getCrop=id=>api.get(`/crops/${id}`); export const addCrop=d=>api.post('/crops',d); export const updateCrop=(id,d)=>api.put(`/crops/${id}`,d); export const deleteCrop=id=>api.delete(`/crops/${id}`); export const templates=()=>api.get('/crop-templates');

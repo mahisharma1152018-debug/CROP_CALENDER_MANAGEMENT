@@ -1,0 +1,1 @@
+const User=require('../models/User');exports.profile=async(req,res,next)=>{try{const allowed=['name','email','phone','location','farmSize'];allowed.forEach(k=>{if(req.body[k]!==undefined)req.user[k]=req.body[k]});await req.user.save();res.json({success:true,data:req.user})}catch(e){next(e)}};

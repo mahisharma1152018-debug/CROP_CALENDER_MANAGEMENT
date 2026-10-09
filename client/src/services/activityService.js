@@ -1,0 +1,1 @@
+import api from './api'; export const getActivities=p=>api.get('/activities',{params:p}); export const addActivity=d=>api.post('/activities',d); export const updateActivity=(id,d)=>api.put(`/activities/${id}`,d); export const deleteActivity=id=>api.delete(`/activities/${id}`); export const completeActivity=(id,d)=>api.patch(`/activities/${id}/complete`,d);

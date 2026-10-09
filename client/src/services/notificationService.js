@@ -1,0 +1,1 @@
+import api from './api'; export const notifications=()=>api.get('/notifications'); export const readNotification=id=>api.patch(`/notifications/${id}/read`); export const readAll=()=>api.patch('/notifications/read-all');
