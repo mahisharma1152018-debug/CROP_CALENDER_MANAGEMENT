@@ -15,6 +15,10 @@ app.use(
 );
 
 app.use(express.json());
+app.get("/", (req, res) => {
+  res.send("Crop Calendar API is running successfully!");
+});
+
 app.get("/api/health", (req, res) =>
   res.json({ success: true, message: "Crop Calendar API running" }),
 );
